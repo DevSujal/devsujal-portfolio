@@ -1,0 +1,188 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--tertiary-color);
+    position: relative;
+}
+:root{
+    --primary-color: white;
+    --seconary-color: black;
+    --tertiary-color: white;
+ }
+ .dark-theme{
+     --primary-color:black;
+     --seconary-color:white;
+     --tertiary-color: black;
+ }
+ #icon{
+    margin-top: 20px;
+    width: 30px;
+    cursor: pointer;
+}
+nav{
+    width: 84%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 100px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+.container nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+.container nav ul li a{
+    text-decoration: none;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 50px;
+    background-color: orangered;
+    color: var(--seconary-color);
+    margin-top: 20px;
+}
+.info{
+    margin: 15% 0 0 8%;
+}
+.info h1{
+    font-size: 70px;
+    color: var(--seconary-color);
+    margin-bottom: 20px;
+
+}
+.info h1 span{
+    color: orangered;
+}
+.info p{
+    color: var(--seconary-color);
+    line-height: 22px;
+    margin-bottom: 30px;
+}
+.info a{
+    text-decoration: none;
+    background-color: var(--seconary-color);
+    color: var(--primary-color);
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+}
+.img{
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+    /* background-color: white; */
+}
+.img img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    transition: bottom 1s, left 1s;
+}
+.img:hover .back{
+bottom: 40px;
+}
+.img:hover .me{
+    left: 54%;
+}
+.social{
+    margin: 100px 0 0 8%;
+}
+.social a{
+    font-size: 30px;
+    color: var(--seconary-color);
+    margin-right: 20px;
+}
+a:hover{
+    color: orange;
+}
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>MY PORTFOLIO WEBSITE</title>
+</head>
+<body>
+    <div class="container">
+     <nav>
+        <img src="images/logo.jpg" alt="logo" class="logo">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="images/cv.pdf">RESUME</a></li>
+            <li><a href="#">SERVICES</a></li>
+            <li><a href="#">HIRE ME</a></li>
+            <img src="images/icon/dark theme icon/moon.png" alt="moon" id="icon">
+        </ul>
+     </nav>
+     <div class="info">
+        <h1>I'm <span>Sujal</span> Nimje</h1>
+        <p>This is my offical portfolio website to showcase my all works related to web <br> development and UI design.</p>
+        <a href="images/cv.pdf">Download CV</a>
+     </div>
+     <div class="img">
+        <img src="images/pattern.png" alt="background" class="back">
+        <div><img src="images/me3.png" alt="ME" class="me"></div>
+     </div>
+     <div class="social">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100074800720304"><i class="fab fa-facebook"></i></a>
+        <a href=" https://www.instagram.com/invites/contact/?i=cafwibsds7kn&utm_content=mshgk7m"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/qr/2RYT44K5OKA3B1 "><i class="fab fa-whatsapp"></i></a>
+     </div>
+    </div>
+    <script>
+        var icon = document.getElementById("icon");
+        icon.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+           if(document.body.classList.contains("dark-theme")){
+            icon.src="images/icon/dark theme icon/sun.png";
+           }
+           else{
+            icon.src="images/icon/dark theme icon/moon.png";
+           }
+        }
+    </script>
+</body>
+</html>
+
+<!-- <div class="container">
+    <div class="head">
+        <div>
+            <img src="images/logo.png" alt="logo">
+        </div>
+        <div class="links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Resume</a>
+            <a href="#">Services</a>
+            <a href="#">Hire Me</a>
+        </div>
+    </div>
+    <div class="name">
+        <h1>I Am Sujal Nimje</h1>
+        <p>This is my offical portfolio website to showcase my all works related to web development and UI design.</p>
+        <div>
+            <a href="#">Download CV</a>
+        </div>
+    </div>
+</div> -->
